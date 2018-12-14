@@ -302,7 +302,7 @@
         </div>
         <!-- /#sidebar-wrapper -->
         <!-- open/close sidebar -->
-        <a href="#menu-toggle" class="btn btn-primary" id="menu-toggle">
+        <a href="#" onclick="toggleMenu();return false;" class="btn btn-primary" id="menu-toggle">
             <span id="right-arrow" class="fas fa-chevron-right"  title="expand sidebar"></span>
             <span id="left-arrow" class="fas fa-chevron-left" title="minimize sidebar"></span>
         </a>
@@ -321,11 +321,8 @@
         <!-- /#page-content-wrapper -->
     </div>
     <!-- /#wrapper -->
-    <!-- jQuery Version 1.12.4 -->
-    <script src="{{ SITEURL }}/theme/js/jquery-1.12.4.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ SITEURL }}/theme/js/jquery-3.3.1.min.js"></script>
     <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
-    <!-- twitchy Script -->
     <script src="{{ SITEURL }}/theme/js/pelican_twitchy.min.js"></script>
     {% include 'include/cookieconsent.html' %}
     {% include 'include/ga.html' %}
