@@ -42,12 +42,11 @@
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
             }());
         {% endif %}
-        $('#show-comments').click(function () {
+        var commentsDiv = document.getElementById('show-comments');
+        commentsDiv.onclick = function() {
             {{ load_disqus() }}
-            $('#show-comments').fadeOut();
-            /*$('#comments').toggleClass('hidden');*/
-            $('#comments').fadeIn().removeClass('hidden');
-        });
+            this.style.display = 'none';        
+        };
     {% else %}
         {{ load_disqus() }}
     {% endif %}
