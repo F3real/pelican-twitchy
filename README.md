@@ -70,6 +70,7 @@ Setting name (followed by default value, if exists) | Description
 --------------------------------------------------- | -----------
 `DISQUS_SITENAME` | Identifier set via DISQUS to identify the site.
 `DISQUS_LOAD_LATER` | If `True` only display a button which will load DISQUS comments only after the button has been pressed.
+`DISQUS_SHOW_COMMENT_NUM` | If `True` display comment number, before comments are loaded. Only usable with `DISQUS_LOAD_LATER`.
 `DISQUS_NO_ID` | If `True` does not prefix identifiers to article comments (same behaviour as standard `notmyidea` theme).
 
 ### Cookie Consent
