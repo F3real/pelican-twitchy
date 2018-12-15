@@ -322,7 +322,7 @@
     </div>
     <!-- /#wrapper -->
     <script src="{{ SITEURL }}/theme/js/bootstrap-native-v4.min.js"></script>
-    <script src="{{ SITEURL }}/theme/js/pelican_twitchy.min.js"></script>
+    <script>function toggleMenu(){document.getElementById("wrapper").classList.toggle("toggled")}</script>
     {% include 'include/cookieconsent.html' %}
     {% include 'include/ga.html' %}
     {% block scripts %}
