@@ -1,7 +1,9 @@
 {% extends "include/article_list.html" %}
 {% block title %}{{ tag }} - {{ SITENAME }}{% endblock %}
 {% block meta %}
+    <meta name="author" content="{{ AUTHOR }}" />
     <meta name="keywords" content="{{ tag }}" />
+    <meta name="description" content="Tag {{ tag }}" />
 {% endblock %}
 
 {% block collapse_tags %}in{% endblock %}
@@ -14,4 +16,15 @@
         </header>
     </div>
 </div>
+{% endblock %}
+
+{% block content %}
+    {{super()}}
+    <div class="row">
+        <div class="col-lg-9">
+        {% if articles_page.has_other_pages() %}
+            {% include 'include/pagination.html' %}
+        {% endif %}
+        </div>
+    </div>
 {% endblock %}

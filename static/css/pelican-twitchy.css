@@ -402,6 +402,14 @@ ul.sidebar_submenu>li>a>i.padding-small{
     }
 }
 
+.paginator > a {
+    font-size: 160%;
+    display: inline-block;     
+    position: relative;    
+    padding: 0 0.5em;     
+    margin: 0 -0.5em; 
+}
+
 blockquote {
     padding:15px;
     border-left: 6px solid #dddddd;

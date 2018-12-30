@@ -22,7 +22,6 @@ pelican-twitchy is a bootstrap4 based pelican theme, with a static navbar on the
 Setting name (followed by default value, if exists) | Description
 --------------------------------------------------- | -----------
 `SITESUBTITLE` | Provide a description of your site, inserted into landing page jumbatron
-`RECENT_POST_COUNT = 5` | How many post should be displayed on the landing page.
 `EXPAND_LATEST_ON_INDEX` | Expand the Latest Articles Section in the Sidebar if you are on `index.html`
 `OPEN_GRAPH = False` | Add Open Graph meta section
 `OPEN_GRAPH_IMAGE` | Url to a default image used in Open Graph, can be overwritten on article/page sites via `og_image` metadata
@@ -38,15 +37,17 @@ Setting name (followed by default value, if exists) | Description
 ### sidebar
 Setting name (followed by default value, if exists) | Description
 --------------------------------------------------- | -----------
-`SHARE = False` | Provide simple non tracking sharing buttons (fb, g+, twitter) for articles/pages and the landing page
-`SOCIAL` | Links to your profile on other site, complete with icon, e.g.: `SOCIAL = (('Twitter', 'https://twitter.com/derwinlu'), ('Bitbucket', 'https://bitbucket.org/winlu'))`
-`SITELOGO` | Add a SiteLogo to your Sidebar, expects the path to the logo similar to `CUSTOM_CSS`
-`SITELOGO_SIZE` | width attribute of `SITELOGO`'s `img` tag.
-`HIDE_SITENAME` | hides the sitename from the sidebar, useful if your sitelogo already contains your sitename.
 `DISPLAY_RECENT_POSTS_ON_MENU` | Displays recent articles in the sidebar, count is determined by `RECENT_POST_COUNT`
 `DISPLAY_PAGES_ON_MENU` | Displays pages in sidebar.
 `DISPLAY_CATEGORIES_ON_MENU` | Displays category list in sidebar.
 `DISPLAY_TAGS_ON_MENU` | Displays tag list in sidebar.
+`HIDE_SITENAME` | hides the sitename from the sidebar, useful if your sitelogo already contains your sitename.
+`RECENT_POST_COUNT = 5` | How many post should be displayed in sidebar if
+`DISPLAY_RECENT_POSTS_ON_MENU` is set to true.
+`SHARE = False` | Provide simple non tracking sharing buttons (fb, g+, twitter) for articles/pages and the landing page
+`SOCIAL` | Links to your profile on other site, complete with icon, e.g.: `SOCIAL = (('Twitter', 'https://twitter.com/derwinlu'), ('Bitbucket', 'https://bitbucket.org/winlu'))`
+`SITELOGO` | Add a SiteLogo to your Sidebar, expects the path to the logo similar to `CUSTOM_CSS`
+`SITELOGO_SIZE` | width attribute of `SITELOGO`'s `img` tag.
 
 ### cc license
 These settings add a CC License note to the footer.
