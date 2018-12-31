@@ -241,7 +241,6 @@ ul.sidebar_submenu>li>a>i.padding-small{
 .highlight pre {
     border: 0px;
     border-radius: 0px;
-    border-left: 4px solid;
     padding: 0px 9.5px;
 }
 
@@ -412,7 +411,6 @@ ul.sidebar_submenu>li>a>i.padding-small{
 
 blockquote {
     padding:15px;
-    border-left: 6px solid #dddddd;
     background:rgba(0,0,0,.05);
     font-family:Menlo,Monaco,"Courier New",Courier,monospace;
 }
