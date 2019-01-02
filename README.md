@@ -42,8 +42,7 @@ Setting name (followed by default value, if exists) | Description
 `DISPLAY_CATEGORIES_ON_MENU` | Displays category list in sidebar.
 `DISPLAY_TAGS_ON_MENU` | Displays tag list in sidebar.
 `HIDE_SITENAME` | hides the sitename from the sidebar, useful if your sitelogo already contains your sitename.
-`RECENT_POST_COUNT = 5` | How many post should be displayed in sidebar if
-`DISPLAY_RECENT_POSTS_ON_MENU` is set to true.
+`RECENT_POST_COUNT = 5` | How many post should be displayed in sidebar if `DISPLAY_RECENT_POSTS_ON_MENU` is set to true.
 `SHARE = False` | Provide simple non tracking sharing buttons (fb, g+, twitter) for articles/pages and the landing page
 `SOCIAL` | Links to your profile on other site, complete with icon, e.g.: `SOCIAL = (('Twitter', 'https://twitter.com/derwinlu'), ('Bitbucket', 'https://bitbucket.org/winlu'))`
 `SITELOGO` | Add a SiteLogo to your Sidebar, expects the path to the logo similar to `CUSTOM_CSS`
