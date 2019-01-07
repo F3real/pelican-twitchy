@@ -48,19 +48,7 @@
 
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
 
-    {% if BOOTSTRAP_THEME %}
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css"/>
-    {% else %}
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css" />
-    {% endif %}
-
-    <link href="{{ SITEURL }}/theme/css/fontawesome-all.min.css" rel="stylesheet" />
-    <link href="{{ SITEURL }}/theme/css/pygments/{{ PYGMENTS_STYLE|default('native') }}.css" rel="stylesheet" />
-
-    {% if TYPOGRIFY %}
-        <link href="{{ SITEURL }}/theme/css/typogrify.css" rel="stylesheet" />
-    {% endif %}
-    <link href="{{ SITEURL }}/theme/css/pelican-twitchy.min.css" rel="stylesheet" />
+    <link href="{{ SITEURL }}/theme/css/combined.css" rel="stylesheet" />
 
     <!-- Feeds -->
     {% if FEED_ALL_ATOM %}
@@ -316,7 +304,6 @@
     <!-- /#wrapper -->
     <script src="{{ SITEURL }}/theme/js/bootstrap-native-v4.min.js"></script>
     <script>function toggleMenu(){document.getElementById("wrapper").classList.toggle("toggled")}</script>
-    {% include 'include/cookieconsent.html' %}
     {% include 'include/ga.html' %}
     {% block scripts %}
     {% endblock %}
