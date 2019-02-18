@@ -1,3 +1,12 @@
+:root{
+    scrollbar-color: #444444 #2a2a2a;
+    scrollbar-width: 50px;
+}
+
+body  {
+    overflow-x:hidden;
+}
+
 .twitchy-background{
     background: #19171c;
 }
@@ -412,5 +421,6 @@ ul.sidebar_submenu>li>a>i.padding-small{
 blockquote {
     padding:15px;
     background:#282828;
+    word-wrap: break-word;
     font-family:Menlo,Monaco,"Courier New",Courier,monospace;
 }
