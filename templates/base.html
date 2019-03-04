@@ -66,7 +66,7 @@
 <body data-spy="scroll" data-target="#scrollspy">
     <div id="wrapper">
         <!-- Sidebar -->
-        <div id="sidebar-wrapper-small" class="twitchy-background">
+        <nav id="sidebar-wrapper-small" class="twitchy-background">
             <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
                 {{ nav_small_li(SITEURL, SITENAME, '<span class="fas fa-home"></span>') }}
                 <li class="nav-divider"></li>
@@ -114,8 +114,8 @@
                 <li class="nav-divider"></li>
                 {{ nav_small_li('#', 'Back to top', '<span class="fas fa-arrow-up"></span>') }}
             </ul>
-        </div>
-        <div id="sidebar-wrapper" class="twitchy-background">
+        </nav>
+        <nav id="sidebar-wrapper" class="twitchy-background">
             <ul id="accordion" class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="{{ SITEURL }}/">
@@ -280,13 +280,13 @@
                 </ul></li>
                 {% endif %}
             </ul>
-        </div>
+        </nav>
         <!-- /#sidebar-wrapper -->
         <!-- open/close sidebar -->
-        <a href="#" onclick="toggleMenu();return false;" class="btn btn-primary" id="menu-toggle">
+        <button onclick="toggleMenu();return false;" class="btn btn-primary" id="menu-toggle">
             <span id="right-arrow" class="fas fa-chevron-right"  title="expand sidebar"></span>
             <span id="left-arrow" class="fas fa-chevron-left" title="minimize sidebar"></span>
-        </a>
+        </button>
        <!-- /open/close sidebar -->
 
         <!-- Page Content -->
