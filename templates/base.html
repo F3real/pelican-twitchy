@@ -302,10 +302,22 @@
         <!-- /#page-content-wrapper -->
     </div>
     <!-- /#wrapper -->
-    <script src="{{ SITEURL }}/theme/js/bootstrap-native-v4.min.js" defer></script>
-    <script>function toggleMenu(){document.getElementById("wrapper").classList.toggle("toggled")}</script>
     {% include 'include/ga.html' %}
     {% block scripts %}
     {% endblock %}
+    <script>
+        function toggleMenu(){document.getElementById("wrapper").classList.toggle("toggled");}
+        
+        const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
+        for (var i = 0; i < triggers.length; i++) { 
+            triggers[i].addEventListener('click', (ev) => {
+                const elm = ev.currentTarget;    
+                ev.preventDefault();
+                const selector = elm.getAttribute('href').replace('#','');
+                elm.classList.toggle("collapsed");
+                document.getElementById(selector).classList.toggle("show");
+            }, false);
+        } 
+    </script>
 </body>
 </html>
