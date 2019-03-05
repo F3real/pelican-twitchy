@@ -306,7 +306,11 @@
     {% block scripts %}
     {% endblock %}
     <script>
-        function toggleMenu(){document.getElementById("wrapper").classList.toggle("toggled");}
+        const wrapper = document.getElementById('wrapper');
+        const sidebarBig = document.getElementById('sidebar-wrapper');
+        const sidebarSmall = document.getElementById('sidebar-wrapper-small');
+
+        function toggleMenu(){wrapper.classList.toggle('toggled');}
         
         const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
         for (var i = 0; i < triggers.length; i++) { 
@@ -314,10 +318,52 @@
                 const elm = ev.currentTarget;    
                 ev.preventDefault();
                 const selector = elm.getAttribute('href').replace('#','');
-                elm.classList.toggle("collapsed");
-                document.getElementById(selector).classList.toggle("show");
+                elm.classList.toggle('collapsed');
+                document.getElementById(selector).classList.toggle('show');
             }, false);
         } 
+
+        function showBigNav() {;
+            sidebarBig.style.display = 'block';
+            sidebarSmall.style.display = 'none';
+        }
+        function showSmallNav() {
+            sidebarBig.style.display = 'none';
+            sidebarSmall.style.display = 'block';
+        }
+
+        const mediaQuery = window.matchMedia('(min-width:768px)');
+        mediaQuery.onchange = e => {
+            if (wrapper.classList.contains('toggled')) {
+                    wrapper.classList.remove('toggled');
+            } else {
+                if (e.matches) {
+                    showBigNav();
+                } else {
+                    showSmallNav();
+                }
+            }
+        }
+        
+        var mutationCallback = function(mutationsList, observer) {
+            for(var mutation of mutationsList) {
+                if (mutation.type == 'attributes') {
+                    var condition = wrapper.classList.contains('toggled');
+                    if (!mediaQuery.matches) {
+                        condition = !condition;
+                    }
+                    if (condition) {
+                        showSmallNav();
+                    } else {
+                        showBigNav();
+                    }
+                }
+            }
+        };
+        var observer = new MutationObserver(mutationCallback);
+        observer.observe(wrapper, { attributes: true});
+
+        wrapper.classList.add('f3');
     </script>
 </body>
 </html>
