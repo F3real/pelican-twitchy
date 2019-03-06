@@ -310,8 +310,6 @@
         const sidebarBig = document.getElementById('sidebar-wrapper');
         const sidebarSmall = document.getElementById('sidebar-wrapper-small');
 
-        function toggleMenu(){wrapper.classList.toggle('toggled');}
-        
         const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
         for (var i = 0; i < triggers.length; i++) { 
             triggers[i].addEventListener('click', (ev) => {
@@ -344,26 +342,25 @@
                 }
             }
         }
-        
-        var mutationCallback = function(mutationsList, observer) {
-            for(var mutation of mutationsList) {
-                if (mutation.type == 'attributes') {
-                    var condition = wrapper.classList.contains('toggled');
-                    if (!mediaQuery.matches) {
-                        condition = !condition;
-                    }
-                    if (condition) {
-                        showSmallNav();
-                    } else {
-                        showBigNav();
-                    }
-                }
-            }
-        };
-        var observer = new MutationObserver(mutationCallback);
-        observer.observe(wrapper, { attributes: true});
 
-        wrapper.classList.add('f3');
+        function setNavbar() {
+            var condition = wrapper.classList.contains('toggled');
+            if (!mediaQuery.matches) {
+                condition = !condition;
+            }
+            if (condition) {
+                showSmallNav();
+            } else {
+                showBigNav();
+            }
+        }
+
+        function toggleMenu(){
+            wrapper.classList.toggle('toggled');
+            setNavbar();
+        }
+
+        window.onload = setNavbar;
     </script>
 </body>
 </html>
